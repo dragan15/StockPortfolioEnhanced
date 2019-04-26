@@ -1,20 +1,12 @@
-﻿using System;
-
-using Xamarin.Forms;
+﻿using System.Collections.Generic;
 
 namespace StockPortfolio.Models
 {
-    public class Globals : ContentPage
+    public static class GlobalVariables
     {
-        public Globals()
-        {
-            Content = new StackLayout
-            {
-                Children = {
-                    new Label { Text = "Hello ContentPage" }
-                }
-            };
-        }
+        public static List<TimeSeriesDaily> StockList;
+        public static List<string> DatesList;
+        public static bool retreived = false;
+        public static string ErrorString = "{\n    \"Error Message\": \"Invalid API call. Please retry or visit the documentation (https://www.alphavantage.co/documentation/) for TIME_SERIES_DAILY.\"\n}";
     }
 }
-

@@ -1,20 +1,17 @@
 ﻿using System;
-
+using System.Collections.Generic;
 using Xamarin.Forms;
+using System.Globalization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace StockPortfolio.Models
 {
-    public class DayModel : ContentPage
+    public class DayData
     {
-        public DayModel()
-        {
-            Content = new StackLayout
-            {
-                Children = {
-                    new Label { Text = "Hello ContentPage" }
-                }
-            };
-        }
+        public string date { get; set; }
+        public double high { get; set; }
+        public double low { get; set; }
+        public double close { get; set; }
     }
 }
-

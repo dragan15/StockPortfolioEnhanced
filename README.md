@@ -5,7 +5,7 @@
 Submitted by: **Dragan Lukic**
 
 ## Tools/Frameworks 
-Alpha Vantage API, (NYTimes Top Stories API, Twitter's PowerTrack API) -->Currently in progress, Microcharts library, Xamarin Forms
+Alpha Vantage API, Twitter's PowerTrack API, (NYTimes Top Stories API) -->Currently in progress, Microcharts library, Xamarin Forms
 
 ## Future Implementations
 AWS Database Integration - Allow users to register and login for the purpose of creating a customized watchlist and forums for the purpose of discussing Stock or investment trends

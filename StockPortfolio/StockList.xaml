@@ -83,12 +83,8 @@
              
   
                         </Grid>
-                <Label x:Name="ChartBox"
-               VerticalOptions="Center"
-               HorizontalOptions="End"
-               BackgroundColor="Blue"
-                />
-                
+
+               
                     <ListView x:Name="historyListView" Grid.Row="1" Grid.Column="0" MinimumHeightRequest="200" HasUnevenRows="true" BackgroundColor="Black">
                               <ListView.ItemTemplate>
                                     <DataTemplate>
@@ -172,9 +168,13 @@
                                         </DataTemplate>
                                     </ListView.ItemTemplate>
                                 </ListView>
-             
-                </Grid>
+                
+                
+            </Grid>
+           
             <microcharts:ChartView x:Name="ChartView" HeightRequest="250" BackgroundColor="Transparent"/>
+          
+            
             </StackLayout>
     </ContentPage.Content>
 </ContentPage>

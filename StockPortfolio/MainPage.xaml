@@ -8,5 +8,6 @@
     >
     <local:StockList Title="Main" />
     <local:SocialMediaPage Title="Live Social Media" />
-    
+    <local:Login Title="LogIn" />
+    <local:news Title="News" />
 </TabbedPage>

@@ -52,29 +52,6 @@ namespace XamarinForms.ViewModels
 
             var ctx = new TwitterContext(auth);
 
-            var tweets = await
-                (from tweet
-                 in ctx.Status
-                 where tweet.Type == StatusType.User
-                        && tweet.ScreenName == "Jelenamandrapa"
-                       && tweet.Count == 30
-                 select tweet)
-                .ToListAsync();
-
-
-            //once information is obtained, map data to Twitter model. all info stored in tweets property
-            Tweets = (from tweet
-                      in tweets
-                      select new Tweet
-                      {
-                          StatusID = tweet.StatusID,
-                          ScreenName = tweet.User.ScreenNameResponse,
-                          Text = tweet.Text,
-                          ImageUrl = tweet.User.ProfileImageUrl,
-                          MediaUrl = tweet?.Entities?.MediaEntities?.FirstOrDefault()?.MediaUrl
-                      })
-                .ToList();
-
             //obtain tweets from hashtags
             Search searchResponse = await
                 (from search in ctx.Search

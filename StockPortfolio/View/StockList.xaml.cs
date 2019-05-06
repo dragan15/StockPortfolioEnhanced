@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using CarouselView.FormsPlugin;
 using Entry = Microcharts.Entry;
 using StockPortfolio.Models;
 using Xamarin.Forms;
@@ -14,6 +15,9 @@ using SkiaSharp;
 
 namespace StockPortfolio
 {
+   
+
+
     public partial class StockList : ContentPage
     {
         public string key = "CPM4DDVVKVQQKXKT"; //API KEY for thr alpha vantage api
@@ -24,7 +28,7 @@ namespace StockPortfolio
         private Entry entry;
         private float temp;
 
-        public StockList()
+    public StockList()
         {
             InitializeComponent();
             // CreateCharts();

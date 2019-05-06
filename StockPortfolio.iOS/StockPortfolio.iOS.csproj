@@ -157,4 +157,10 @@
       <Name>StockPortfolio</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iconhome.png" />
+    <BundleResource Include="Resources\iconsearch.png" />
+    <BundleResource Include="Resources\icontwitter.png" />
+    <BundleResource Include="Resources\iconuser.png" />
+  </ItemGroup>
 </Project>

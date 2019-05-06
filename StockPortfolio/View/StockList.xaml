@@ -3,12 +3,14 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+    xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
     x:Class="StockPortfolio.StockList">
     <ContentPage.Content>
         <StackLayout BackgroundColor="Black">
             <Label
          HeightRequest="50"
         />
+            <!-- Button and search Bar for Stocks -->
             <Grid>
                 
                 <Grid.ColumnDefinitions>
@@ -84,7 +86,7 @@
   
                         </Grid>
 
-               
+                    <!-- search List for Stocks -->
                     <ListView x:Name="historyListView" Grid.Row="1" Grid.Column="0" MinimumHeightRequest="200" HasUnevenRows="true" BackgroundColor="Black">
                               <ListView.ItemTemplate>
                                     <DataTemplate>
@@ -110,7 +112,7 @@
                                                             Text="{Binding date}"
                                                             FontSize="Small"
                                                             />
-                                            
+                                                           
                                                          <Label
                                                             Grid.Row="1"
                                                             TextColor="White"
@@ -171,10 +173,49 @@
                 
                 
             </Grid>
+        
+            <microcharts:ChartView x:Name="ChartView" HeightRequest="250" BackgroundColor="Transparent"/> 
+            <!-- Chart view, and Carousel View Grid Layout -->
+            <!--
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="0.5" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+            -->
+            <!-- Chart view, and Carousel View-->
+            <!--
+            <ContentView Grid.Row="0" >
+             <controls:CarouselViewControl>
+             <controls:CarouselViewControl.ItemTemplate>   
+             <DataTemplate>
+               <Grid>
+                  <Grid.RowDefinitions>
+                     <RowDefinition Height="*" />
+                     <RowDefinition Height="Auto" />
+                   
+                  </Grid.RowDefinitions> 
+               -->
+                  <!-- CONTENT GOES HERE-->  
+                   <!--
+                  <ContentView Grid.Row="0" Padding="60,30,60,0">
+                   <microcharts:ChartView x:Name="ChartView" HeightRequest="250" BackgroundColor="Transparent"/>                      
+                  </ContentView>
+                  
+                  <ContentView Grid.Row="0" Padding="60,30,60,0">
+                                        
+                  </ContentView> 
+                  -->
+                  <!-- CONTENT ENDS HERE-->  
+                <!--
+               </Grid>                       
+             </DataTemplate>                   
+             </controls:CarouselViewControl.ItemTemplate> 
+             </controls:CarouselViewControl>            
            
-            <microcharts:ChartView x:Name="ChartView" HeightRequest="250" BackgroundColor="Transparent"/>
-          
-            
+            </ContentView>
+            -->
             </StackLayout>
     </ContentPage.Content>
 </ContentPage>

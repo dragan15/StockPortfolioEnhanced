@@ -6,8 +6,8 @@
     x:Class="StockPortfolio.MainPage"
     
     >
-    <local:StockList Title="Main" />
-    <local:SocialMediaPage Title="Live Social Media" />
-    <local:Login Title="LogIn" />
-    <local:news Title="News" />
+    <local:StockList Title="Main" Icon="iconhome.png" />
+    <local:SocialMediaPage Title="Social Media" Icon="icontwitter.png"/>
+    <local:Login Title="LogIn" Icon="iconuser.png" />
+    <local:news Title="News" Icon="iconsearch.png" />
 </TabbedPage>

@@ -6,7 +6,7 @@
     xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
     x:Class="StockPortfolio.StockList">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="Black">
+        <StackLayout BackgroundColor="White">
             <Label
          HeightRequest="50"
         />
@@ -28,7 +28,7 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
-                           
+                            <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                     
                         <Grid.RowDefinitions>
@@ -45,23 +45,32 @@
 
                         <Button
                             x:Name="GetSock_Clicked"
-                            TextColor="White"
+                            TextColor="Black"
                             Grid.Column="3"
                             Grid.Row="0"
                             Text="Get Stock"
                             Clicked="HandleGetStock"
                             />
                     
+                      <Button
+                            x:Name="GetHelp_Clicked"
+                            Grid.Column="4"
+                            Grid.Row="0"
+                            Image="iconsettings.png"
+                            Clicked="OnAlertSimpleClicked"
+                            /> 
+ 
+                    
                         <Label
                             Grid.Row="1"
                             Grid.Column="0"
                             Text="Highest: "
-                            TextColor="White"
+                            TextColor="Black"
                             />
                     
                         <Label
                             x:Name="highestLabel"
-                            TextColor="White"
+                            TextColor="Black"
                             Grid.Row="1"
                             Grid.Column="1"
                             Text=""
@@ -71,12 +80,12 @@
                             Grid.Row="1"
                             Grid.Column="2"
                             Text="Lowest: "
-                            TextColor="White"
+                            TextColor="Black"
                             />
                     
                         <Label
                             x:Name="lowestLabel"
-                            TextColor="White"
+                            TextColor="Black"
                             Grid.Row="1"
                             Grid.Column="3"
                             Text=""
@@ -87,7 +96,7 @@
                         </Grid>
 
                     <!-- search List for Stocks -->
-                    <ListView x:Name="historyListView" Grid.Row="1" Grid.Column="0" MinimumHeightRequest="200" HasUnevenRows="true" BackgroundColor="Black">
+                    <ListView x:Name="historyListView" Grid.Row="1" Grid.Column="0" MinimumHeightRequest="200" HasUnevenRows="true" BackgroundColor="White">
                               <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <ViewCell Height="120">
@@ -106,7 +115,7 @@
                                                  
                                                          <Label
                                                             x:Name="dayDateLabel"
-                                                            TextColor="White"
+                                                            TextColor="Black"
                                                             Grid.Row="0"
                                                             Grid.Column="0"
                                                             Text="{Binding date}"
@@ -115,7 +124,7 @@
                                                            
                                                          <Label
                                                             Grid.Row="1"
-                                                            TextColor="White"
+                                                            TextColor="Black"
                                                             Grid.Column="0"
                                                             Text="High"
                                                             FontSize="Small"
@@ -125,7 +134,7 @@
                                                             Grid.Row="1"
                                                             Grid.Column="1"
                                                             Text="Low"
-                                                            TextColor="White"
+                                                            TextColor="Black"
                                                             FontSize="Small"
                                                          />
                                        
@@ -134,7 +143,7 @@
                                                             Grid.Column="2"
                                                             Text="Close"
                                                             FontSize="Small"
-                                                            TextColor="White"
+                                                            TextColor="Black"
                                                          />
                                         
                                                        <Label
@@ -143,7 +152,7 @@
                                                             Grid.Column="0"
                                                             Text="{Binding high}"
                                                             FontSize="Small"
-                                                            TextColor="White"
+                                                            TextColor="Black"
                                                          />
                                         
                                                         <Label
@@ -152,7 +161,7 @@
                                                             Grid.Column="1"
                                                             Text="{Binding low}"
                                                             FontSize="Small"
-                                                            TextColor="White"
+                                                            TextColor="Black"
                                                          />
                                        
                                                         <Label
@@ -161,7 +170,7 @@
                                                             Grid.Column="2"
                                                             Text="{Binding close}"
                                                             FontSize="Small"
-                                                            TextColor="White"
+                                                            TextColor="Black"
                                                          />
                                         
                                                     </Grid>
@@ -174,7 +183,7 @@
                 
             </Grid>
         
-            <microcharts:ChartView x:Name="ChartView" HeightRequest="250" BackgroundColor="Transparent"/> 
+            <microcharts:ChartView x:Name="ChartView" HeightRequest="250" BackgroundColor="White"/> 
             <!-- Chart view, and Carousel View Grid Layout -->
             <!--
             <Grid>

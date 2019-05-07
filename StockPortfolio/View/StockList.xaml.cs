@@ -12,6 +12,7 @@ using StockPortfolio.Models;
 using Xamarin.Forms;
 using Microcharts;
 using SkiaSharp;
+using System.Diagnostics;
 
 namespace StockPortfolio
 {
@@ -46,7 +47,7 @@ namespace StockPortfolio
                         temp = float.Parse(GlobalVariables.StockList[i].The2High);
                         entry = new Entry(temp)
                         {
-                            Color = SKColor.Parse("#FFFFFF"),
+                            Color = SKColor.Parse("#000000"),
                             Label = "",
                             ValueLabel = GlobalVariables.StockList[i].The2High,
                         };
@@ -152,6 +153,13 @@ namespace StockPortfolio
 
             GetHighAndLow();
         }
-  
+
+        async void OnAlertSimpleClicked(object sender, EventArgs e)
+        {
+            var action = await DisplayActionSheet("Help?", "Cancel", null, "Stock Info", "Twitter", "Search");
+            Debug.WriteLine("Action: " + action);
+           
+        }
+
     }
 }

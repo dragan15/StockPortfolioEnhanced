@@ -28,6 +28,7 @@ namespace StockPortfolio
         private List<Entry> entries = new List<Entry> { };
         private Entry entry;
         private float temp;
+      
 
     public StockList()
         {
@@ -40,7 +41,8 @@ namespace StockPortfolio
         {
             if (GlobalVariables.retreived == true)
             {
-                for (int i = 0; i < GlobalVariables.StockList.Count; i++)
+               
+                for (int i = 0; i < 30; i++)
                 {
                     if (i % 2 == 0)
                     {
@@ -88,7 +90,7 @@ namespace StockPortfolio
 
                 List<DayData> DayList = new List<DayData>();
 
-                for (int i = 0; i < GlobalVariables.StockList.Count; i++)
+                for (int i = 0; i < 30; i++)
                 {
                     //data model equal to api equivalent. 
                     //reminder parsing means to take one form of data and converting it to another
@@ -125,7 +127,8 @@ namespace StockPortfolio
 
         private void GetHighAndLow()
         {
-            for (int i = 0; i < GlobalVariables.StockList.Count; i++)
+           
+            for (int i = 0; i < 30; i++)
             {
 
                 if (double.Parse(GlobalVariables.StockList[i].The3Low) <= min)

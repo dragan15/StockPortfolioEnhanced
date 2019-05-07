@@ -1,5 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
+using System.IO;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -7,10 +8,11 @@ namespace StockPortfolio
 {
     public partial class App : Application
     {
+       
         public App()
         {
             InitializeComponent();
-
+           
             MainPage = new MainPage();
         }
 

@@ -161,7 +161,21 @@ namespace StockPortfolio
         {
             var action = await DisplayActionSheet("Help?", "Cancel", null, "Stock Info", "Twitter", "Search");
             Debug.WriteLine("Action: " + action);
-           
+            if(action == "Stock Info")
+            {
+                ActionDetails.Text = "Enter Stock SYMBOL and you will be prompted accordingly";
+            }
+
+            if (action == "Twitter")
+            {
+                ActionDetails.Text = "Twitter Stocks are for informative decisions only";
+            }
+
+            if (action == "Search")
+            {
+                ActionDetails.Text = "It's not Google, but it will work";
+            }
+
         }
 
     }

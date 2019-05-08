@@ -17,9 +17,9 @@
                     <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="4*"/>
                     <RowDefinition Height="10*"/>
-                     <RowDefinition Height="2*"/>
+                     <RowDefinition Height="4*"/>
                     </Grid.RowDefinitions>
                 
                     <Grid Grid.Column="0" Grid.Row="0" Padding="5" Margin="5">
@@ -32,6 +32,7 @@
                             </Grid.ColumnDefinitions>
                     
                         <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
@@ -50,6 +51,17 @@
                             Grid.Row="0"
                             Text="Get Stock"
                             Clicked="HandleGetStock"
+                            />
+                    
+           
+                      <Label
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            Text= ""
+                            FontSize="10"
+                            x:Name="ActionDetails"
+                            TextColor="Black"
                             />
                     
                       <Button
@@ -96,7 +108,7 @@
                         </Grid>
 
                     <!-- search List for Stocks -->
-                    <ListView x:Name="historyListView" Grid.Row="1" Grid.Column="0" MinimumHeightRequest="200" HasUnevenRows="true" BackgroundColor="White">
+                    <ListView x:Name="historyListView" Grid.Row="1" Grid.Column="0" MinimumHeightRequest="150" HasUnevenRows="true" BackgroundColor="White">
                               <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <ViewCell Height="120">
